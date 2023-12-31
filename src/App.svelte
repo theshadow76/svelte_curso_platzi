@@ -1,13 +1,26 @@
 <script>
+	import About from "./components/About.svelte";
+
 	export let name;
+	export let lastName;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>Hello {name} {lastName}!</h1>
+	<About />
 </main>
 
 <style>
+
+   :global(body) {
+	background-color: #f2eee3;
+	color: blue;
+   }
+
+   :global(root) {
+	--theme-color: purple;
+   }
+
 	main {
 		text-align: center;
 		padding: 1em;
